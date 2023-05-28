@@ -1,0 +1,9 @@
+.box__video{
+    width: calc(100% - 2rem);
+    aspect-ratio: 3 / 2;
+    
+    margin: 1rem;
+    border-left: 4px solid transparent;
+    border-radius: 5px;
+    box-shadow: 1px -1px 13px -3px rgba(0,0,0,0.10)
+}

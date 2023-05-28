@@ -1,0 +1,50 @@
+
+.head{
+    padding: 1rem 1rem;
+
+    border-bottom: 2px solid #2A7AE4;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.logo__head {
+    display: inline;
+    width: 25%;
+    max-width: 160px;
+}
+
+.logo__head img{
+    width: 100%;
+}
+
+.nuevo-video__boton{
+    display: none;
+    padding: 0.5rem 2rem;
+    font-weight: 700;
+    color: white;
+    background-color: #2A7AE4;
+    border: none;
+    border-radius: 2px;
+}
+
+@media  screen and (min-width:768px){
+    .head{
+        padding: 1rem 3rem;
+    
+        border-bottom: 3px solid #2A7AE4;
+    
+        justify-content: space-between;
+    }
+    .logo__head {
+        width: 16%;
+    }
+    
+    .nuevo-video__boton{
+        display: block;
+    }
+    
+}
+
+
