@@ -1,17 +1,25 @@
 
-import React from "react";
+import React, { useState, useEffect} from "react";
+import { buscarVideos } from "../../../client-service/client-service";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import './Lista.css'
+import './Lista.css';
 
 import Card from "../Card/Card";
 
-const Lista = () => {
+const Lista = ({titulo, descripcion,color,url}) => {
 
-    const tituloCategoria = 'Front End'
-    const subtituloCategoria = 'Formación Front End de Alura Latam'
+    const [ videos, setVideos] = useState([]);
+
+    const tituloCategoria = titulo;
+    const subtituloCategoria = descripcion;
+    const colorCategoria = color;
+
+    useEffect(() => {
+        buscarVideos(url, setVideos)
+    },[])
 
 
     const settings = {
@@ -58,20 +66,21 @@ const Lista = () => {
     return (
         <>
             <div className="categoria__encabezado">
-                <h2 className="categoria__titulo">{tituloCategoria}</h2>
+                <h2 className="categoria__titulo" style={{backgroundColor: colorCategoria}} >{tituloCategoria}</h2>
                 <h3 className="categoria__subtitulo">{subtituloCategoria}</h3>
             </div>
             
             <Slider {...settings}>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+                {
+                    videos.map((data) => { 
+                        return < Card 
+                            key={data.id} 
+                            url= {data.URLVideo}
+                            color= {colorCategoria}
+                        />
+                    })
+                }
+                
             </Slider>
             <div className="lista__separador"></div>
         </>

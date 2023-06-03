@@ -1,11 +1,35 @@
+import { useState } from 'react';
 import logo from './Logo.png';
 import './Head.css';
+import { Link } from 'react-router-dom';
+
 
 const Head = () => {
+    const [ swtch, setSwtch] = useState(false);
+
+    const activarBoton = () => {
+        setSwtch((swtch) => !swtch)
+        
+    }
+    const visualizar = () =>{
+        if(swtch){
+            return {display: 'block'}
+        }else{
+            return {display: 'none'}
+        }
+    }
+    
     
     return <div className='head'>
-        <a className='logo__head'><img src={logo} /></a>
-        <button className='nuevo-video__boton' >Nuevo vídeo</button>
+        <Link to={'/'} className='logo__head'><img src={logo} /></Link>
+        <div className='menu'>
+            <div>
+                <button className='agregar-video' onClick={activarBoton} >+</button>
+            </div>
+            
+            <Link to={'/agregarnuevovideo'} style={visualizar()} className='nuevo-video__boton' >Nuevo vídeo</Link>
+        </div>
+        
     </div>
 }
 

@@ -1,12 +1,40 @@
+import React, { useState, useEffect} from "react"
 import './Contenido.css';
 import Lista from './Lista/Lista';
+import { buscarUltimoVideo, buscarCategoria } from '../../client-service/client-service';
 
 
 const Contenido = () => {
+
+    const [video, setVideo] = useState({});
+    const [categorias, setCategorias] = useState([])
+
+    useEffect(() => {
+        buscarUltimoVideo('/video', setVideo)
+        .catch(error => alert(error));
+
+        buscarCategoria('/categoria', setCategorias)
+        .catch(error => alert(error));
+        
+    }, [])
+
+
     return <div className='contenido__area'>
         <div className='contenido__container' >
+
+            {
+                categorias.map(data => {
+                    return <Lista 
+                        key={data.id} 
+                        titulo ={data.titulo}
+                        descripcion={data.descripcion}
+                        color ={data.color}
+                        url = {`/video?categoria=${data.titulo}`}
+                    />
+                })
+            }
             
-            <Lista />
+            
             
             
         </div>
