@@ -1,17 +1,14 @@
 import React, { useState, useEffect} from "react"
 import './Contenido.css';
 import Lista from './Lista/Lista';
-import { buscarUltimoVideo, buscarCategoria } from '../../client-service/client-service';
+import { buscarCategoria } from '../../client-service/client-service';
 
 
 const Contenido = () => {
 
-    const [video, setVideo] = useState({});
     const [categorias, setCategorias] = useState([])
 
     useEffect(() => {
-        buscarUltimoVideo('/video', setVideo)
-        .catch(error => alert(error));
 
         buscarCategoria('/categoria', setCategorias)
         .catch(error => alert(error));

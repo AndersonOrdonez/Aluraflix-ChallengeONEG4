@@ -15,6 +15,7 @@ const Portada = () => {
     const urlVideo = video.URLVideo;
     const tituloDelVideo = video.titulo;
     const colorBorder ='#2A7AE4';
+    const descripcion = video.descripcion
     
     return <section className="portada">
         <div className='portada__container'>
@@ -23,9 +24,9 @@ const Portada = () => {
                     <h2 className='portada__titulo' style={{backgroundColor: colorBorder}} > Último Vídeo</h2>
                 </div>
 
-                <h3 className='portada__subtitulo'>Challenge React: {tituloDelVideo}</h3>
+                <h3 className='portada__subtitulo'>{tituloDelVideo}</h3>
                 <p className='portada__descripcion'>
-                    Último vídeo agregado
+                    {descripcion}
                 </p>
             </div>
             <div className='portada__ladoDerecho'>
