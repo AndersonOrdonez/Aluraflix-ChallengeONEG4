@@ -1,24 +1,49 @@
 import { useState, useEffect } from 'react';
+import { useParams,useResolvedPath } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import './NuevaCategoria.css'
-import { agregarCategoria, buscarUsuario } from '../../client-service/client-service';
+import './EditarCategoria.css'
+import { agregarCategoria, buscarUsuario, buscarCategoriaEspecifica, modificarCategoria  } from '../../client-service/client-service';
 import { v4 as uuidv4 } from 'uuid';
-import AdministrarCategoria from '../../componentes/AdministrarCategoria/AdministrarCategoria';
 
-const NuevaCategoria = () => {
+const EditarCategoria = () => {
 
+    const [id7, setId] = useState('');
     const [titulo, setTitulo] = useState('');
     const [descripcion, setDescripcion] = useState('');
     const [color, setColor] = useState('#2A7AE4');
+
     const [codigoUsuario, setCodigoUsuario] = useState('');
-    const [usuario, setUsuario] = useState([])
+    const [usuario, setUsuario] = useState([]);
+
+    const [ categoriaEspecifica, setCategoriaEspecifica] = useState([]);
+
+    //const id  = useParams();
+    //let { userId } = useParams();
+    //console.log(userId)
+
+    const url = new URL(window.location);
+    const id = url.searchParams.get("id");
+    
+
+    useEffect(() => {
+        buscarCategoriaEspecifica(`/categoria/${id}`,setCategoriaEspecifica)
+        .catch(error => alert(error)) 
+    }, [id])
+
+    useEffect(() => {
+        setTitulo(categoriaEspecifica.titulo);
+        setDescripcion(categoriaEspecifica.descripcion);
+        setColor(categoriaEspecifica.color);
+    }, [categoriaEspecifica])
+    
 
     useEffect(() => {
         buscarUsuario('/usuario', setUsuario)
         .catch(error => alert(error))     
     }, [])
+
 
     function limpiarInputs(){
         setTitulo('');
@@ -37,8 +62,7 @@ const NuevaCategoria = () => {
     
                 usuario.forEach( (user) => {
                     if(codigoUsuario === user.codigoUsuario){
-                        const id =  uuidv4();
-                        agregarCategoria(id, titulo, descripcion, color);
+                        modificarCategoria(id, titulo, descripcion, color);
                     } else {
                         alert('Código de usuario inválido')
                     }
@@ -46,7 +70,7 @@ const NuevaCategoria = () => {
             }}
             
         >
-            <h2>Nueva Categoría</h2>
+            <h2>Editar Categoría</h2>
             <fieldset>
                 <TextField 
                     id="outlined-basic" 
@@ -101,10 +125,8 @@ const NuevaCategoria = () => {
 
         
     </div>
-
-    <AdministrarCategoria />
     
     </>
 }
 
-export default NuevaCategoria;
+export default EditarCategoria;

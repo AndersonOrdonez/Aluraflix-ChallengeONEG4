@@ -23,7 +23,6 @@ const NuevoVideo = () => {
     const [descripcion, setDescripcion] = useState('');
     const [codigoUsuario, setCodigoUsuario] = useState('');
     
-
     useEffect(() => {
         buscarCategoria('/categoria', setCategorias)
         .catch(error => alert(error));
@@ -46,11 +45,9 @@ const NuevoVideo = () => {
             onSubmit={(e) => {
                 e.preventDefault();
                 const id =  uuidv4();
-                console.log(id)
-                //console.log(titulo, URLVideo, categoria, descripcion)
-                //(id, titulo, URLVideo, descripcion, categoria)
                 agregarVideo(id, titulo, URLVideo, descripcion, categoria);
-            }}>
+            }}
+        >
 
             <h2>Nuevo video</h2>
             <fieldset>
@@ -85,7 +82,7 @@ const NuevoVideo = () => {
                     >
                         {
                             categorias.map((categoria) => {
-                                return <MenuItem value={categoria.titulo}>{categoria.titulo}</MenuItem>
+                                return <MenuItem key={categoria.id} value={categoria.titulo}>{categoria.titulo}</MenuItem>
                             })
                         }
 

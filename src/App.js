@@ -6,6 +6,7 @@ import Home from './pages/Home/Home';
 import Page404 from './pages/Page404/Page404';
 import NuevoVideo from './pages/NuevoVideo/NuevoVideo';
 import NuevaCategoria from './pages/NuevaCategoria/NuevaCategoria';
+import EditarCategoria from './pages/EditarCategoria/EditarCategoria';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path ='/' element= { <Home />}  />
         <Route path='/agregarnuevovideo' element={ <NuevoVideo />} />
         <Route path='/agregarnuevacategoria' element={ <NuevaCategoria />} />
+        <Route path='/editarcategoria' element={ <EditarCategoria />} />
 
         <Route path='*' element={ <Page404 />} />
       </Routes>
