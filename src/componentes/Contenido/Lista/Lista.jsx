@@ -31,7 +31,6 @@ const Lista = ({titulo, descripcion,color,url}) => {
         initialSlide: 0,
 
         autoplay: false,
-        speed: 500,
         autoplaySpeed: 2000,
         cssEase: "linear",
 

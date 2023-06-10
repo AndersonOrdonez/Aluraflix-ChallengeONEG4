@@ -1,15 +1,12 @@
 import { useState, useEffect } from 'react';
-import { useParams,useResolvedPath } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import './EditarCategoria.css'
-import { agregarCategoria, buscarUsuario, buscarCategoriaEspecifica, modificarCategoria  } from '../../client-service/client-service';
-import { v4 as uuidv4 } from 'uuid';
+import { buscarUsuario, buscarCategoriaEspecifica, modificarCategoria  } from '../../client-service/client-service';
 
 const EditarCategoria = () => {
 
-    const [id7, setId] = useState('');
     const [titulo, setTitulo] = useState('');
     const [descripcion, setDescripcion] = useState('');
     const [color, setColor] = useState('#2A7AE4');

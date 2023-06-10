@@ -21,7 +21,7 @@ const Head = () => {
     
     
     return <div className='head'>
-        <Link to={'/'} className='logo__head'><img src={logo} /></Link>
+        <Link to={'/'} className='logo__head'><img src={logo} alt='Logo de Aluraflix' /></Link>
         <div className='menu'>
             <div>
                 <button className='agregar-video' onClick={activarBoton} >+</button>
