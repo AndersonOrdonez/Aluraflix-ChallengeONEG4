@@ -1,0 +1,97 @@
+{
+  "usuario": [
+    {
+      "id": "561541ce-d7d5-4b35-b744-131e7db434c1",
+      "nombre": "Anderson Ordonez",
+      "email": "andjanderson23@gmail.com",
+      "password": "12345678",
+      "codigoUsuario": "1234"
+    }
+  ],
+  "categoria": [
+    {
+      "id": "1",
+      "titulo": "Front End",
+      "descripcion": "Formación Front End de Alura Latam",
+      "color": "#6BD1FF"
+    },
+    {
+      "id": "2",
+      "titulo": "Back End",
+      "descripcion": "Formación Back End de Alura Latam",
+      "color": "#00C86F"
+    }
+  ],
+  "video": [
+    {
+      "id": "561541ce-d7d5-4b35-b744-131e7db434a0",
+      "titulo": "¿Cuál es el mejor Editor de Codigo?",
+      "descripcion": "",
+      "URLVideo": "https://www.youtube.com/embed/dSA6PuKB-ik",
+      "categoria": "Front End"
+    },
+    {
+      "id": "561541ce-d7d5-4b35-b744-131e7db434a1",
+      "titulo": "7 cosas que debes saber para ser programador frontend este 2023",
+      "descripcion": "",
+      "URLVideo": "https://www.youtube.com/embed/q0UgClC8md4",
+      "categoria": "Front End"
+    },
+    {
+      "id": "561541ce-d7d5-4b35-b744-131e7db434a2",
+      "titulo": "FRONT-END EN 5 PASOS - ¿Que aprender y por donde empezar para ser Desarrollador Web Frontend? *2023*",
+      "descripcion": "",
+      "URLVideo": "https://www.youtube.com/embed/SDMpGO1_qU0",
+      "categoria": "Front End"
+    },
+    {
+      "id": "561541ce-d7d5-4b35-b744-131e7db434a3",
+      "titulo": "Los roles en frontend - La mejor explicación en español",
+      "descripcion": "",
+      "URLVideo": "https://www.youtube.com/embed/N8mFHB7JDkw",
+      "categoria": "Front End"
+    },
+    {
+      "id": "561541ce-d7d5-4b35-b744-131e7db434a4",
+      "titulo": "Paso a paso para ser programador frontend en 2023 (Guía completa)",
+      "descripcion": "",
+      "URLVideo": "https://www.youtube.com/embed/6D25A8_50Jk",
+      "categoria": "Front End"
+    },
+    {
+      "id": "561541ce-d7d5-4b35-b744-131e7db434a5",
+      "titulo": "El FUTURO del Desarrollo FRONTEND en 2023",
+      "descripcion": "",
+      "URLVideo": "https://www.youtube.com/embed/7REOUGel80Q",
+      "categoria": "Front End"
+    },
+    {
+      "id": "561541ce-d7d5-4b35-b744-131e7db434b0",
+      "titulo": "Qué aprender para ser programador backend el 2023?",
+      "descripcion": "",
+      "URLVideo": "https://www.youtube.com/embed/0Zb5fgO0ubE",
+      "categoria": "Back End"
+    },
+    {
+      "id": "561541ce-d7d5-4b35-b744-131e7db434b1",
+      "titulo": "Ruta para ser programador BACKEND",
+      "descripcion": "",
+      "URLVideo": "https://www.youtube.com/embed/fkVgNf3kMTM",
+      "categoria": "Back End"
+    },
+    {
+      "id": "561541ce-d7d5-4b35-b744-131e7db434b2",
+      "titulo": "5 COSAS que debes saber como Desarrollador BACKEND JUNIOR en 2023",
+      "descripcion": "",
+      "URLVideo": "https://www.youtube.com/embed/vS7SwSBs9Vw",
+      "categoria": "Back End"
+    },
+    {
+      "id": "36b9364e-4ec4-4687-a3ae-858a2913fcd2",
+      "titulo": "¡Lo que viene en el futuro del front-end en el 2023!",
+      "URLVideo": "https://www.youtube.com/embed/nvvLSkNS6Z0",
+      "descripcion": "¿Qué viene para el front-end en el 2023? ¡Mira este video para descubrirlo! Te enseñaré las tendencias y tecnologías más importantes que espero ver en el futuro cercano y cómo puedes estar a la vanguardia de ellas. ¡No te lo pierdas!",
+      "categoria": "Front End"
+    }
+  ]
+}
