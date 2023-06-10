@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+📝🚀 🔥 ✨
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# AluraFlix Challenge REACT ONE G4 🚀
+Challenge ONE Front-End + REACT: Creando una plataforma de vídeos.
 
-## Available Scripts
+El siguiente proyecto es parte de la formación de Front End de ONE - Oracle Next Generation con Alura Latam. **Se pone a prueba nuestro conocimiento sobre REACT  y el manejo de CRUD con AXIOS.**
 
-In the project directory, you can run:
+## API's utilizadas
+* AXIOS: https://axios-http.com/
+* React Slick: https://react-slick.neostack.com/
+* React Router DOM: https://www.npmjs.com/package/react-router-dom
+* UUID: https://www.npmjs.com/package/uuid
 
-### `npm start`
+## Descripción del caso
+El objetivo de Aluraflix es ser un Netflix de Alura. En él tendrás sugerencias de videos relacionados con sus intereses educativos y también podrás agregar nuevas categorías y nuevos videos en la plataforma.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Es muy importante que el sitio sea adaptable a dispositivos móviles**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Diseño Figma
+https://www.figma.com/file/T6P42CQ8S8WJ7OImPuu91H/AluraFlix-ESP?node-id=0%3A1&t=mtxbXTHrBiPkHTV4-1
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Página de demostración
+> [Aquí está el link](https://example.com)

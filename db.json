@@ -20,18 +20,6 @@
       "titulo": "Back End",
       "descripcion": "Formación Back End de Alura Latam",
       "color": "#00C86F"
-    },
-    {
-      "id": "2d11887b-2aae-462b-b2bd-dd850512dc58",
-      "titulo": "Inteligencia Artificial",
-      "descripcion": "Es el espacio para vídeos sobre Inteligencia Artificial",
-      "color": "#9df41a"
-    },
-    {
-      "id": "15b172ff-f8a4-4cd5-be50-113cdae42b40",
-      "titulo": "UX/UI",
-      "descripcion": "Es el espacio personal para vídeos de referencia sobre UX/UI",
-      "color": "#e854e3"
     }
   ],
   "video": [

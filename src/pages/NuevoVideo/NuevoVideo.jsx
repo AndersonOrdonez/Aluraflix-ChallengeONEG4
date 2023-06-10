@@ -8,7 +8,7 @@ import Select from '@mui/material/Select';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import './NuevoVideo.css'
-import { buscarCategoria, agregarVideo } from '../../client-service/client-service';
+import { buscarCategoria, agregarVideo, buscarUsuario } from '../../client-service/client-service';
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -21,12 +21,19 @@ const NuevoVideo = () => {
     const [URLVideo, setURLVideo] = useState('');
     const [categoria, setCategoria] = useState('');
     const [descripcion, setDescripcion] = useState('');
+
     const [codigoUsuario, setCodigoUsuario] = useState('');
+    const [usuario, setUsuario] = useState([])
     
     useEffect(() => {
         buscarCategoria('/categoria', setCategorias)
         .catch(error => alert(error));
         
+    }, [])
+
+    useEffect(() => {
+        buscarUsuario('/usuario', setUsuario)
+        .catch(error => alert(error))     
     }, [])
 
     function limpiarInputs(){
@@ -44,8 +51,15 @@ const NuevoVideo = () => {
             action="" 
             onSubmit={(e) => {
                 e.preventDefault();
-                const id =  uuidv4();
-                agregarVideo(id, titulo, URLVideo, descripcion, categoria);
+
+                usuario.forEach( (user) => {
+                    if(codigoUsuario === user.codigoUsuario){
+                        const id =  uuidv4();
+                        agregarVideo(id, titulo, URLVideo, descripcion, categoria);
+                    }else{
+                        alert('Código de usuario inválido')
+                    }
+                })
             }}
         >
 
@@ -59,6 +73,7 @@ const NuevoVideo = () => {
                     fullWidth
                     value={titulo}
                     onChange={ (e) => setTitulo(e.target.value)}
+                    required
                 />
                 <TextField 
                     id="outlined-basic" 
@@ -68,16 +83,18 @@ const NuevoVideo = () => {
                     fullWidth
                     value={URLVideo}
                     onChange={ (e) => setURLVideo(e.target.value)}
+                    required
                 />
 
                 <FormControl fullWidth margin="normal">
-                    <InputLabel id="demo-simple-select-label">Categoría</InputLabel>
+                    <InputLabel id="demo-simple-select-label" required>Categoría</InputLabel>
                     <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         label="Categoría"
                         value={categoria}
                         onChange={ (e) => setCategoria(e.target.value)}
+                        
     
                     >
                         {
@@ -98,6 +115,7 @@ const NuevoVideo = () => {
                     margin="normal"
                     value={descripcion}
                     onChange={ (e) => setDescripcion(e.target.value)}
+                    required
                 />
 
                 <TextField 
@@ -108,6 +126,7 @@ const NuevoVideo = () => {
                     fullWidth
                     value={codigoUsuario}
                     onChange={ (e) => setCodigoUsuario(e.target.value)}
+                    required
                 />
                 
             </fieldset>
